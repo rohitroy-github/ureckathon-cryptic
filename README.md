@@ -1,7 +1,8 @@
 <h2>Ureck-A-Thon 2023</h2>
 <h3>Cryptic</h3>
-<br>
+
 A Web3.0 <b>Initial Coin Offering Launchpad (ICO)</b>
+
 <!-- insertAVideoDemoForTheProject -->
 <br/>
 Cryptic is a <b>Blockchain Initial Coin Offering Launchpad (ICO)</b> which provides a <b>ONE-STOP</b>
