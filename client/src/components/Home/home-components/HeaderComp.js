@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import logo from "../../../assets/logo.png";
+import logo from "../../../assets/canva-logo.png";
 import "../LandingPage.css";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -12,12 +12,14 @@ const HeaderComp = (props) => {
   return (
     <>
       <div className="header" ref={props.scrollTo}>
-        <img src={logo} alt="logo" />
+        <a href="http://localhost:3000/">
+          <img src={logo} alt="logo" className="logoImg" />
+        </a>
 
         <div className="right_header">
           <div>
             <button
-              className="navbarBtn faqBlueButton"
+              className="navbarBtn"
               onClick={() => props.onFormSwitch("login")}
             >
               Login
@@ -27,7 +29,7 @@ const HeaderComp = (props) => {
           <div>
             {" "}
             <button
-              className="navbarBtn faqBlueButton"
+              className="navbarBtn"
               onClick={() => props.onFormSwitch("register")}
             >
               Register
@@ -37,21 +39,23 @@ const HeaderComp = (props) => {
           <div>
             {" "}
             <a href="#">
-              <button className="navbarBtn faqBlueButton">About</button>
+              <button className="navbarBtn">About</button>
             </a>
           </div>
 
           <div>
             {" "}
             <a href="#">
-              <button className="navbarBtn faqBlueButton ">Contact</button>
+              <button className="navbarBtn">Contact</button>
             </a>
           </div>
         </div>
       </div>
       {/* mobile nav starts */}
       <div className="mobBar">
-        <img src={logo} alt="logo" />
+        <a href="http://localhost:3000/">
+          <img src={logo} alt="logo" className="logoImg" />
+        </a>{" "}
         <MenuIcon onClick={setToggler} />
         <div className={`righBar${open && "open"}`}>
           <div>

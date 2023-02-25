@@ -6,6 +6,19 @@ body {
   box-sizing: border-box;
 }
 
+.logoImg {
+  width: 130px;
+  height: auto;
+  transition: transform 0.4s;
+}
+
+.logoImg:hover {
+  transform: scale(0.9);
+}
+
+.logoImg:hover {
+}
+
 .right_header {
   display: flex;
   flex-wrap: wrap;
@@ -45,24 +58,24 @@ body {
 
 .yellow_button {
   background-color: #1976d2;
-  padding: 1%;
+  padding: 10px 15px 10px 15px;
   color: #fff;
-  font-weight: 500;
-  outline-width: 0px;
-  border-width: 0px;
-  border-radius: 8px;
-  margin-left: 16px;
-  cursor: pointer;
+  margin-top: 50px;
+  font-weight: 800;
+  border-radius: 5px;
+  width: fit-content;
+  margin-top: 10px;
   transition: transform 0.4s;
 }
 
 .yellow_button:hover {
   transform: scale(1.1);
+  border: 2px solid white;
 }
 
 .faqBlueButton {
   background-color: #1976d2;
-  padding: 1%;
+  padding: 15px 20px 15px 20px;
   color: #fff;
   font-weight: 800;
   /* outline-width: 6px;
@@ -71,10 +84,11 @@ body {
   margin-left: 16px;
   cursor: pointer;
   transition: transform 0.4s;
+  border: 2px solid #1976d2;
 }
 
 .faqBlueButton:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   background-color: white;
   color: #1976d2;
   border: 2px solid #1976d2;
@@ -82,7 +96,7 @@ body {
 
 .faqWhiteButton {
   background-color: white;
-  padding: 1%;
+  padding: 15px 20px 15px 20px;
   color: #1976d2;
   font-weight: 800;
   /* outline-width: 0px;
@@ -94,9 +108,10 @@ body {
 }
 
 .faqWhiteButton:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   background-color: #1976d2;
   color: white;
+  border: 2px solid white;
 }
 
 .navbarBtn {
@@ -108,11 +123,11 @@ body {
   margin-left: 16px;
   cursor: pointer;
   transition: transform 0.4s;
-  border: 1px solid #1976d2;
+  border: 3px solid #1976d2;
 }
 
 .navbarBtn:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .login_button:hover {
@@ -125,12 +140,12 @@ body {
 } */
 /* mob nav styling */
 
-@media only screen and (min-width: 465px) {
+@media only screen and (min-width: 768px) {
   .mobBar {
     display: none;
   }
 }
-@media only screen and (max-width: 465px) {
+@media only screen and (max-width: 768px) {
   .mobBar {
     display: flex;
     justify-content: space-between;
@@ -141,11 +156,11 @@ body {
     padding-right: 10px;
     color: #0a0a0a;
   }
-  .mobBar > img {
+  /* .mobBar > img {
     width: 100px;
     height: 50px;
     object-fit: cover;
-  }
+  } */
   .header {
     display: none;
   }
@@ -192,8 +207,15 @@ body {
 .cover_top {
   background-image: url('../../assets/cover.png');
   background-size: cover;
+  height: 50vh;
+  width: auto;
   padding: 4rem;
   color: #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+  justify-content: center;
 }
 .cover_top > h1 {
   font-size: 3rem;
@@ -674,14 +696,15 @@ button {
     color: black;
   }
 
-  .faqBlueButton {
+  /* .faqBlueButton {
     background-color: #1976d2;
     padding: 3%;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.4s;
-  }
+    border: 2px solid #1976d2;
+  } */
 
   .faqWhiteButton {
     background-color: white;
@@ -733,11 +756,55 @@ button {
     flex-direction: row;
     align-items: center;
     background-color: #fcf9f9;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
     color: #0a0a0a;
     width: 100%;
     box-sizing: border-box;
     height: 75px;
+  }
+
+  .logoImg {
+    width: 100px;
+    height: auto;
+  }
+
+  .cover_top {
+    background-image: url('../../assets/cover.png');
+    background-size: cover;
+    height: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cover_top > h1 {
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .cover_top > h6 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .yellow_button {
+    background-color: #1976d2;
+    padding: 10px 15px 10px 15px;
+    color: #fff;
+    font-weight: 800;
+    border-radius: 5px;
+    width: fit-content;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
 }
