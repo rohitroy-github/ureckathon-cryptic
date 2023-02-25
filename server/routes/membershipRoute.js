@@ -1,17 +1,20 @@
 const express = require("express");
 const router = express.Router();
 const MemberDetails = require('../models/MemShipModel')
+const CryptoUser = require("../models/User")
 
 
 router.post('/addmember', async (req,res)=>{
      
-    const { memberShip , date , noOfinvested , walletAddress } = req.body;
+
+    const { memberShip , date , noOfinvested , email } = req.body;
 
     try {
-        // const user = await CryptoUser.findOne({ walletAddress: req.body.walletAddress })
+        const existinguser = await CryptoUser.findOne({ emailAddress: email })
         
         const membership = await new MemberDetails({
-            userWallet: walletAddress,
+            userEmail: email,
+
             memberShip: memberShip,
             startDateMem: date,
             noOfinvested: noOfinvested
