@@ -20,8 +20,8 @@ router.post('/create-checkout-session', async (req, res) => {
         },
       ],
       mode: 'payment',
-      success_url: `${process.env.CLIENT_URL}/payment-successful`,
-      cancel_url: `${process.env.CLIENT_URL}/membership`,
+      success_url: `${process.env.CLIENT_URL}/dashboard/payment-successful`,
+      cancel_url: `${process.env.CLIENT_URL}/dashboard/membership`,
     });
   
     res.send({ url: session.url});
