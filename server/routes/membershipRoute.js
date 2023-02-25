@@ -6,6 +6,7 @@ const CryptoUser = require("../models/User")
 
 router.post('/addmember', async (req,res)=>{
      
+
     const { memberShip , date , noOfinvested , email } = req.body;
 
     try {
@@ -13,6 +14,7 @@ router.post('/addmember', async (req,res)=>{
         
         const membership = await new MemberDetails({
             userEmail: email,
+
             memberShip: memberShip,
             startDateMem: date,
             noOfinvested: noOfinvested
