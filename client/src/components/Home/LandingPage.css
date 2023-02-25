@@ -6,14 +6,22 @@ body {
   box-sizing: border-box;
 }
 
+.right_header {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+}
+
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background-color: #fcf9f9;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-left: 5rem;
+  margin-right: 5rem;
   color: #0a0a0a;
 }
 
@@ -25,16 +33,15 @@ body {
 
 .header_link {
   margin-left: 16px;
-  font-weight: 600;
-  font-size: 0.8rem;
+  font-weight: 800;
   cursor: pointer;
   text-decoration: none;
-  color: #666;
+  color: black;
 }
 
-.header_link:hover {
+/* .header_link:hover {
   color: rgb(87, 87, 247);
-}
+} */
 
 .yellow_button {
   background-color: #1976d2;
@@ -70,6 +77,7 @@ body {
   transform: scale(1.1);
   background-color: white;
   color: #1976d2;
+  border: 2px solid #1976d2;
 }
 
 .faqWhiteButton {
@@ -91,9 +99,20 @@ body {
   color: white;
 }
 
-.login_button {
-  background-color: transparent;
+.navbarBtn {
+  padding: 10px 15px 10px 15px;
+  background-color: white;
   color: #1976d2;
+  font-weight: 800;
+  border-radius: 5px;
+  margin-left: 16px;
+  cursor: pointer;
+  transition: transform 0.4s;
+  border: 1px solid #1976d2;
+}
+
+.navbarBtn:hover {
+  transform: scale(1.1);
 }
 
 .login_button:hover {
@@ -101,9 +120,9 @@ body {
   color: #1976d2;
 }
 
-.right_header > h3:hover {
+/* .right_header > h3:hover {
   color: #dea30d;
-}
+} */
 /* mob nav styling */
 
 @media only screen and (min-width: 465px) {
@@ -137,9 +156,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: fit-content;
+    height: 100%;
     width: 200px;
-    background-color: rgb(255, 255, 255);
+    padding: 3%;
+    background-color: white;
+    opacity: 0.8;
     transition: all 3s ease-in-out;
     transform: translate(-200px);
     position: absolute;
@@ -147,6 +168,21 @@ body {
     right: 0px;
     transform: translate(0);
   }
+}
+
+.mobNavbarBtn {
+  padding: 10px 15px 10px 15px;
+  background-color: white;
+  color: #1976d2;
+  font-weight: 800;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.4s;
+  border: 3px solid #1976d2;
+  width: 100%;
+  margin: 2%;
+  text-align: center;
+  align-items: center;
 }
 
 .cover {
@@ -689,5 +725,19 @@ button {
     box-shadow: 0px 5px 8px -5px black;
     padding: 18px;
     border-radius: 5px;
+  }
+
+  .mobBar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fcf9f9;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #0a0a0a;
+    width: 100%;
+    box-sizing: border-box;
+    height: 75px;
   }
 }
