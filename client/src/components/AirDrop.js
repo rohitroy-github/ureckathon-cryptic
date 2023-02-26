@@ -18,7 +18,7 @@ const AirDrop = () => {
     // let useraddres = User.current.walletAddress
     // console.log(useraddres);
     let templist = await axios.get(
-      `http://localhost:5000/getprojectsfuture?page=${page.current}`
+      `https://ureckathon-cryptic-server.vercel.app/getprojectsfuture?page=${page.current}`
     );
     console.log(templist);
     setairdrop(templist.data.jsnres);
@@ -28,7 +28,7 @@ const AirDrop = () => {
     let existingList = airdrop;
     page.current++;
     let templist = await axios.get(
-      `http://localhost:5000/getprojectsfuture?page=${page.current}`
+      `https://ureckathon-cryptic-server.vercel.app/getprojectsfuture?page=${page.current}`
     );
     if (Object.keys(templist.data.jsnres) == 0) {
       // alert('no more')

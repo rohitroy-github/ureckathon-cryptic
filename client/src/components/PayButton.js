@@ -9,14 +9,17 @@ function PayButton({price, type, noOfinvested}) {
   const {currentAccount} = useContext(TransactionContext);
   const handleCheckout = () => {
     axios
-      .post("http://localhost:5000/create-checkout-session", {
-        price,
-        type,
-      })
+      .post(
+        "https://ureckathon-cryptic-server.vercel.app/create-checkout-session",
+        {
+          price,
+          type,
+        }
+      )
       .then((res) => {
         if (res.data.url) {
           axios
-            .post(" http://localhost:5000/addmember", {
+            .post(" https://ureckathon-cryptic-server.vercel.app/addmember", {
               userWallet: currentAccount,
               memberShip: type,
               noOfinvested: noOfinvested,

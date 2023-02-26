@@ -83,7 +83,10 @@ const LaunchSection = () => {
       console.log(uri);
       project.img_url = uri;
       axios
-        .post("http://localhost:5000/addproject", project)
+        .post(
+          "https://ureckathon-cryptic-server.vercel.app/addproject",
+          project
+        )
         .then((res) => {
           console.log(res);
           setShow(true);

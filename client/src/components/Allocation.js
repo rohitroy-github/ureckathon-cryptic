@@ -18,7 +18,7 @@ const Allocation = ({proj}) => {
   const [List, setList] = useState([]);
   const getAllocatedProject = async () => {
     let allocationList = await axios.post(
-      "http://localhost:5000/getallocation",
+      "https://ureckathon-cryptic-server.vercel.app/getallocation",
       {
         walletAddress: currentAccount,
         token_name: proj.tkn_name,
@@ -50,10 +50,13 @@ const Allocation = ({proj}) => {
             {List.map((value, index) => {
               const claimtokenHandle = () => {
                 axios
-                  .post("http://localhost:5000/tokenclaim", {
-                    investId: value._id,
-                    projId: proj.pdt_id,
-                  })
+                  .post(
+                    "https://ureckathon-cryptic-server.vercel.app/tokenclaim",
+                    {
+                      investId: value._id,
+                      projId: proj.pdt_id,
+                    }
+                  )
                   .then((res) => {
                     console.log(res);
                     value.istokenClaimed = res.data.succes;

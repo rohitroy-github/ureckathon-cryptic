@@ -22,7 +22,7 @@ const Allprojects = () => {
     // let useraddres = User.current.walletAddress
     // console.log(useraddres);
     let templist = await axios.get(
-      `http://localhost:5000/getprojects/some?page=${page.current}`
+      `https://ureckathon-cryptic-server.vercel.app/getprojects/some?page=${page.current}`
     );
     // console.log(templist);
     setprojectList(templist.data.jsnres);
@@ -32,7 +32,7 @@ const Allprojects = () => {
     let existingList = projectList;
     page.current++;
     let templist = await axios.get(
-      `http://localhost:5000/getprojects/some?page=${page.current}`
+      `https://ureckathon-cryptic-server.vercel.app/getprojects/some?page=${page.current}`
     );
     if (Object.keys(templist.data.jsnres) == 0) {
       // alert('no more')

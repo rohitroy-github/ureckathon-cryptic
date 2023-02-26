@@ -154,7 +154,7 @@ export const TransactionsProvider = ({children}) => {
         setCurrentAccount(accounts[0]);
         // post
         axios
-          .post("http://localhost:5000/connectWallet", {
+          .post("https://ureckathon-cryptic-server.vercel.app/connectWallet", {
             email: user.emailAddress,
             walletAddress: accounts[0],
           })

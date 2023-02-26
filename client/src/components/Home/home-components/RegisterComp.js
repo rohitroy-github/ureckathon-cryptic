@@ -17,7 +17,7 @@ export const Register = (props) => {
   const onSubmit = (data) => {
     console.log(data);
     axios
-      .post("http://localhost:5000/usercrypto", data)
+      .post("https://ureckathon-cryptic-server.vercel.app/usercrypto", data)
       .then((res) => {
         console.log(res);
         localStorage.setItem("crypticUser", JSON.stringify(res.data.user));

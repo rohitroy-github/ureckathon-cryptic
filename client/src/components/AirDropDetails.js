@@ -49,7 +49,7 @@ const AirDropDetails = () => {
 
   const getpjtdtls = async (id) => {
     axios
-      .post("http://localhost:5000/getOneproj", {
+      .post("https://ureckathon-cryptic-server.vercel.app/getOneproj", {
         pjtid: id,
       })
       .then((res) => {

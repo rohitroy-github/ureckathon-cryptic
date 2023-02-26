@@ -78,7 +78,7 @@ const InvestModal = ({mod}) => {
 
   //       console.log(InvestDetails);
   //       axios
-  //         .post("http://localhost:5000/investproj", InvestDetails)
+  //         .post("https://ureckathon-cryptic-server.vercel.app/investproj", InvestDetails)
   //         .then((res) => {
   //           console.log(res);
   //         });
@@ -142,7 +142,10 @@ const InvestModal = ({mod}) => {
     // sendingDetailsToDatabase
 
     axios
-      .post("http://localhost:5000/investproj", InvestDetails)
+      .post(
+        "https://ureckathon-cryptic-server.vercel.app/investproj",
+        InvestDetails
+      )
       .then((res) => {
         console.log(res);
         if (res.status == 200) {

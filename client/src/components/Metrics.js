@@ -10,9 +10,12 @@ const Metrics = ({projectdetails}) => {
   const ID = projectdetails._id;
   console.log(ID);
   const getMetrics = async () => {
-    let metJson = await axios.post("http://localhost:5000/getmetrics", {
-      projId: ID,
-    });
+    let metJson = await axios.post(
+      "https://ureckathon-cryptic-server.vercel.app/getmetrics",
+      {
+        projId: ID,
+      }
+    );
     setjson(metJson.data);
     console.log(metJson);
   };
