@@ -2,6 +2,8 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import Coin from "./Coin";
 
+import {Typography} from "@mui/material";
+
 const CoverComp = (props) => {
   function handleBackClick() {
     props.scrollTo.current.scrollIntoView({behavior: "smooth"});
@@ -40,8 +42,29 @@ const CoverComp = (props) => {
   return (
     <div className="cover">
       <div className="cover_top">
-        <h1>Invest in ICOs like a pro.</h1>
-        <p>Become a subscriber and know beforehand which ido to invest in</p>
+        {/* <h1>Invest in ICOs like a pro.</h1>
+        <p>Become a subscriber and know beforehand which ido to invest in</p> */}
+
+        <Typography variant="h1" style={{color: "white", fontWeight: "600"}}>
+          Invest in ICOs like a pro.{" "}
+        </Typography>
+
+        <Typography
+          variant="h6"
+          style={{
+            fontWeight: "600",
+            marginTop: "20px",
+            marginBottom: "20px",
+            "@media (max-width: 786px)": {
+              fontWeight: "600",
+              marginTop: "25px",
+              marginBottom: "25px",
+            },
+          }}
+        >
+          Become a subscriber right now and chekout some awesome ICO
+          investments.{" "}
+        </Typography>
         <button className="yellow_button" onClick={handleBackClick}>
           Register Now
         </button>
