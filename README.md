@@ -9,10 +9,18 @@ solution for <b>ICO Investors & Potential WEB3.0 Startups</b> to raise funds in 
 for thier project to launch their ready product into the global crypto market in the coming future.
 <br/>
 <br/>
-<b>Project Track : </b>
+<b>Project Track : Open Innovation | Web 3.0</b>
 <br/>
 <br />
-<b>Project Hosted/ Deployed Links : </b>
+<b>Project Hosted/ Deployed Links : <a href="https://ureckathon-cryptic-client.netlify.app/">Client Side</a></b>
+<br/>
+<br />
+<b>Project Description :</b>
+<br/>
+<br />
+<b>Cryptic Launchpad lets the user invest in ICOs(Initial Coin Offerings), know about an ICO and its details & thus check out its's potential market value in the future. 
+Along with this, it also let’s the Crypto Startups list themselves and raise investments from the potential investors in exchange of their product token or coin, know unique selling points and thus gives them a strong hand during their initial growth stages.
+So, Cryptic Launchpad is a one stop solution for all the blockchain and crypto enthusiasts, if you are an investor, you can find potential coins or token to make your next big investment in the crypto world and if you are an amazing new age startup dreaming about gaining heights , our application might provide you the potential investment you were looking for, and all you have to do is just list your product which is your coin or token and give it’s description or details to us and we will market them us nicely for you and help you at your budding stage.</b>
 <br/>
 <br />
 <!-- Tech Stack Used -->
