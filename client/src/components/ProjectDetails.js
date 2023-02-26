@@ -1,6 +1,6 @@
 // to show detailed info of a particular projects
-import React, { useState, useContext, useEffect } from "react";
-import { Avatar, Divider, Grid, Stack } from "@mui/material";
+import React, {useState, useContext, useEffect} from "react";
+import {Avatar, Divider, Grid, Stack} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import sxprop from "./sxStyle";
@@ -16,21 +16,21 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Link, Route, Routes } from "react-router-dom";
+import {Link, Route, Routes} from "react-router-dom";
 import Metrics from "./Metrics";
 import ProjectInfo from "./ProjectInfo";
 import Allocation from "./Allocation";
 import YourBid from "./YourBid";
 import UserContext from "../context/appContext";
 import InvestModal from "./InvestModal";
-import { TransactionContext } from "../context/TransactionContext";
-import { height } from "@mui/system";
+import {TransactionContext} from "../context/TransactionContext";
+import {height} from "@mui/system";
 import axios from "axios";
 
 const ProjectDetails = () => {
-  const { currentAccount } = useContext(TransactionContext);
+  const {currentAccount} = useContext(TransactionContext);
   const context = useContext(UserContext);
-  const { projectdetails, setprojectList } = context;
+  const {projectdetails, setprojectList} = context;
 
   const [open, setOpen] = useState(false);
 
@@ -53,22 +53,26 @@ const ProjectDetails = () => {
 
   // INRconversionFunction
   const getpjtdtls = async (id) => {
-    axios.post('http://localhost:5000/getOneproj', { pjtid: id }).then((res) => {
-      setprojectList(res.data.pjt)
-      console.log(res);
-    }).catch((error) => {
-      alert(error.message)
-    })
-  }
+    axios
+      .post("http://localhost:5000/getOneproj", {
+        pjtid: id,
+      })
+      .then((res) => {
+        setprojectList(res.data.pjt);
+        console.log(res);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
 
   useEffect(() => {
-    getpjtdtls(localStorage.getItem('projId'))
-  }, [])
-
+    getpjtdtls(localStorage.getItem("projId"));
+  }, []);
 
   return (
     <Box m={3}>
-      {open && <InvestModal mod={{ open, setOpen, investInfo }} />}
+      {open && <InvestModal mod={{open, setOpen, investInfo}} />}
       <Stack
         direction={"column"}
         spacing={4}
@@ -82,19 +86,19 @@ const ProjectDetails = () => {
             <Grid
               container
               spacing={1}
-              sx={{ alignItems: "center", marginBottom: "10px" }}
+              sx={{alignItems: "center", marginBottom: "10px"}}
             >
               <Grid item xs={12}>
                 <Stack direction={"row"} spacing={1}>
                   <Typography
                     variant="h5"
-                    style={{ color: "#1976d2", fontWeight: "500" }}
+                    style={{color: "#1976d2", fontWeight: "500"}}
                   >
                     Project
                   </Typography>
                   <Typography
                     variant="h5"
-                    style={{ color: "#1976d2", fontWeight: "800" }}
+                    style={{color: "#1976d2", fontWeight: "800"}}
                   >
                     {projectdetails.name}
                   </Typography>
@@ -103,21 +107,21 @@ const ProjectDetails = () => {
 
               <Grid item xs={6}>
                 <Stack direction={"row"} spacing={4} style={{}}>
-                  <LanguageIcon style={{ fontSize: "25px", cursor: "pointer" }} />
-                  <FacebookIcon style={{ fontSize: "25px", cursor: "pointer" }} />
-                  <LinkedInIcon style={{ fontSize: "25px", cursor: "pointer" }} />
-                  <TelegramIcon style={{ fontSize: "25px", cursor: "pointer" }} />
-                  <TwitterIcon style={{ fontSize: "25px", cursor: "pointer" }} />
+                  <LanguageIcon style={{fontSize: "25px", cursor: "pointer"}} />
+                  <FacebookIcon style={{fontSize: "25px", cursor: "pointer"}} />
+                  <LinkedInIcon style={{fontSize: "25px", cursor: "pointer"}} />
+                  <TelegramIcon style={{fontSize: "25px", cursor: "pointer"}} />
+                  <TwitterIcon style={{fontSize: "25px", cursor: "pointer"}} />
                 </Stack>
               </Grid>
 
               <Grid item xs={6}>
                 <Typography variant="cardhrdtxt">
                   {projectdetails.img_url == "NONE" ? (
-                    <Avatar sx={{ bgcolor: "#838588" }}>NO</Avatar>
+                    <Avatar sx={{bgcolor: "#838588"}}>NO</Avatar>
                   ) : (
                     <Avatar
-                      sx={{ bgcolor: "#838588", width: "30%", height: "30%" }}
+                      sx={{bgcolor: "#838588", width: "30%", height: "30%"}}
                       src={projectdetails.img_url}
                       sizes="large"
                     />
@@ -126,16 +130,16 @@ const ProjectDetails = () => {
               </Grid>
 
               <Grid item xs={12} style={{}}>
-                <Stack direction={"row"} spacing={1} style={{ margin: "0px" }}>
+                <Stack direction={"row"} spacing={1} style={{margin: "0px"}}>
                   <Typography
                     variant="h7"
-                    style={{ color: "#1976d2", fontWeight: "500" }}
+                    style={{color: "#1976d2", fontWeight: "500"}}
                   >
                     Token Symbol
                   </Typography>
                   <Typography
                     variant="h7"
-                    style={{ color: "#1976d2", fontWeight: "800" }}
+                    style={{color: "#1976d2", fontWeight: "800"}}
                   >
                     {projectdetails.token_name}
                   </Typography>
@@ -161,7 +165,7 @@ const ProjectDetails = () => {
 
         <Box
           sx={sxprop.loadbox}
-          style={{ width: "100%", justifyContent: "center" }}
+          style={{width: "100%", justifyContent: "center"}}
         >
           <Button sx={sxprop.buttonsx} onClick={handleModal}>
             Invest Now
@@ -181,23 +185,23 @@ const ProjectDetails = () => {
         }}
       >
         <Typography variant="cardhrdtxt">
-          <Link to="info" style={{ textDecoration: "none" }}>
+          <Link to="info" style={{textDecoration: "none"}}>
             Project Details
           </Link>
         </Typography>
         <Typography variant="cardhrdtxt">
-          <Link to="metrics" style={{ textDecoration: "none" }}>
+          <Link to="metrics" style={{textDecoration: "none"}}>
             Metrics
           </Link>
         </Typography>
         <Typography variant="cardhrdtxt">
-          <Link to="allocation" style={{ textDecoration: "none" }}>
+          <Link to="allocation" style={{textDecoration: "none"}}>
             Your Allocation
           </Link>
         </Typography>
       </Stack>
 
-      <Divider variant="middle" sx={{ margin: "15px 50px 30px 50px" }} />
+      <Divider variant="middle" sx={{margin: "15px 50px 30px 50px"}} />
 
       <Routes>
         <Route
@@ -222,7 +226,7 @@ const ProjectDetails = () => {
         <Route path="bid" element={<YourBid />}></Route>
       </Routes>
 
-      <Divider variant="middle" sx={{ margin: "30px 50px 0px 50px" }} />
+      <Divider variant="middle" sx={{margin: "30px 50px 0px 50px"}} />
 
       <Accordion sx={sxprop.sxfaq}>
         <AccordionSummary
@@ -236,7 +240,7 @@ const ProjectDetails = () => {
           <Stack
             spacing={1}
             direction="column"
-            sx={{ marginTop: "0px", marginLeft: "20px", width: "90%" }}
+            sx={{marginTop: "0px", marginLeft: "20px", width: "90%"}}
           >
             <Typography variant="listfont" display="block" gutterBottom>
               How to invest in this ICO ?
@@ -245,7 +249,7 @@ const ProjectDetails = () => {
               variant="listfont"
               display="block"
               gutterBottom
-              style={{ fontWeight: "400" }}
+              style={{fontWeight: "400"}}
             >
               Press the [INVEST NOW] button to start the investing procedure.
             </Typography>
@@ -257,7 +261,7 @@ const ProjectDetails = () => {
               variant="listfont"
               display="block"
               gutterBottom
-              style={{ fontWeight: "400" }}
+              style={{fontWeight: "400"}}
             >
               Yes, you can invest using cryptocurrencies (Ethers) for investing
               in any ICO.
@@ -270,7 +274,7 @@ const ProjectDetails = () => {
               variant="listfont"
               display="block"
               gutterBottom
-              style={{ fontWeight: "400" }}
+              style={{fontWeight: "400"}}
             >
               No, you cannot make ICO investment using fiat cuurrencies for now
               but our team is working on implementing that soon.
@@ -283,7 +287,7 @@ const ProjectDetails = () => {
               variant="listfont"
               display="block"
               gutterBottom
-              style={{ fontWeight: "400" }}
+              style={{fontWeight: "400"}}
             >
               An initial coin offering (ICO) is a type of capital-raising
               activity in the cryptocurrency and blockchain environment. The ICO
