@@ -73,7 +73,7 @@ const Cards = ({ido}) => {
                 width: {sm: "328px", xs: "250px"},
               }}
             >
-              {ido.writeup.slice(0, 150)}
+              {ido.writeup.slice(0, 150)} ...
             </Typography>
             <Grid container spacing={1}>
               <Grid item xs={9}>

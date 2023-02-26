@@ -26,7 +26,7 @@ const AirdropCards = ({ido}) => {
   const {setprojectList} = context;
   const handleproject = () => {
     setprojectList(ido);
-    localStorage.setItem('projId', ido._id)
+    localStorage.setItem("projId", ido._id);
   };
 
   const theme = createTheme(customTheme);
@@ -87,19 +87,31 @@ const AirdropCards = ({ido}) => {
             <Typography
               variant="body2"
               sx={{
-                height: "110px",
+                // margin: "10px",
+                height: "130px",
                 width: {sm: "328px", xs: "250px"},
               }}
             >
-              {ido.writeup}
+              {ido.writeup.slice(0, 200)} ...
             </Typography>
-            <Grid container spacing={0}>
+            <Grid container spacing={1}>
+              {/* DisplaytotalFundAllocatedByTheProjectHere */}
+
               <Grid item xs={9}>
                 <Typography variant="listfont">Starting Date</Typography>
               </Grid>
               <Grid item xs={3}>
                 <Typography variant="accordianhead">
-                  {ido.start_date.slice(0, 10)}
+                  {`${ido.start_date.slice(0, 10)}`}
+                </Typography>
+              </Grid>
+
+              <Grid item xs={9}>
+                <Typography variant="listfont">Ending Date</Typography>
+              </Grid>
+              <Grid item xs={3}>
+                <Typography variant="accordianhead">
+                  {`${ido.end_date.slice(0, 10)}`}
                 </Typography>
               </Grid>
             </Grid>

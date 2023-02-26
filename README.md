@@ -23,6 +23,9 @@ Along with this, it also let’s the Crypto Startups list themselves and raise i
 So, Cryptic Launchpad is a one stop solution for all the blockchain and crypto enthusiasts, if you are an investor, you can find potential coins or token to make your next big investment in the crypto world and if you are an amazing new age startup dreaming about gaining heights , our application might provide you the potential investment you were looking for, and all you have to do is just list your product which is your coin or token and give it’s description or details to us and we will market them us nicely for you and help you at your budding stage.</b>
 <br/>
 <br />
+<b>Project Snapshots :</b>
+<br/>
+<br />
 <!-- Tech Stack Used -->
 <b>Tech Stack :</b>
 <br/>
