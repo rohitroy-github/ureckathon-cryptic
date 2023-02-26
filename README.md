@@ -38,7 +38,6 @@ So, Cryptic Launchpad is a one stop solution for all the blockchain and crypto e
 ![Screenshot (265)](https://user-images.githubusercontent.com/68563695/221429364-c2239c5f-e73f-4412-b865-ac5757d6cd62.png)
 
 <br/>
-<br />
 <!-- Tech Stack Used -->
 <b>Tech Stack :</b>
 <br/>
