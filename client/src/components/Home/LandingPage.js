@@ -20,6 +20,7 @@ const LandingPage = () => {
   return (
     <div className="app">
       <HeaderComp onFormSwitch={toggleForm} scrollTo={loginref} />
+      {/* miainFormContent? */}
       <div className="Form">
         {currentForm === "login" ? (
           <Login onFormSwitch={toggleForm} />

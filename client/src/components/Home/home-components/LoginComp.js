@@ -49,7 +49,7 @@ export const Login = (props) => {
           <p className="error-paragraph">Please check the Email</p>
         )}
         <Form.Field>
-          <label>Password</label>
+          <label className="formLabel">Password</label>
           <span className="passwordHolder">
             <input
               placeholder="Password"
@@ -76,7 +76,9 @@ export const Login = (props) => {
         {errors.password && (
           <p className="error-paragraph">Please give a suitable password</p>
         )}
-        <Button type="submit">Login</Button>
+        <Button type="submit" className="sumbitBtn">
+          Login
+        </Button>
       </Form>
       <div className="btn-div">
         <p className="text-btn">Don't have an account? </p>

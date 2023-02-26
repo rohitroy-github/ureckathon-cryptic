@@ -90,7 +90,9 @@ export const Register = (props) => {
         {errors.password && (
           <p className="error-paragraph">Please check the Password</p>
         )}
-        <Button type="submit">Register</Button>
+        <Button type="submit" className="submitBtn">
+          Register
+        </Button>
       </Form>
       <div className="btn-div">
         <p className="text-btn">Already have an account? </p>

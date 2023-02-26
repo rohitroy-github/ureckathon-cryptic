@@ -33,9 +33,17 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #fcf9f9;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  /* margin-left: 5rem;
+  margin-right: 5rem; */
+  padding-left: 5rem;
+  padding-right: 5rem;
   color: #0a0a0a;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
 }
 
 .header > img {
@@ -583,14 +591,22 @@ body {
 }
 
 /* form stylings */
+
 .Form {
   text-align: center;
   display: flex;
-  min-height: 100vh;
+  height: 110vh;
   align-items: center;
   justify-content: center;
   color: white;
-  background-image: linear-gradient(79deg, #464949, #948e93 48%, #d0cbc8);
+  background-image: linear-gradient(
+    to right bottom,
+    #00426b,
+    #1e608e,
+    #367fb3,
+    #4ca0d8,
+    #62c3ff
+  );
 }
 
 .auth-form-container,
@@ -598,12 +614,41 @@ body {
 .register-form {
   display: flex;
   flex-direction: column;
+  text-align: center;
+}
+
+.auth-form-container {
+  padding: 4rem 5rem 4rem 5rem;
+  border: 3px solid white;
+  text-align: center;
+}
+
+.sumbitBtn {
+  padding: 15px 20px 15px 30px;
+  background-color: transparent;
+  border: 2px solid white;
+  width: 100%;
+  color: white;
+  border-radius: 5px;
+  transition: transform 0.2s;
+  font-weight: 800;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.sumbitBtn:hover {
+  transform: scale(1.1);
+}
+
+.formLabel {
+  font-weight: 800;
 }
 
 @media screen and (min-width: 600px) {
   .auth-form-container {
-    padding: 5rem;
-    border: 1px solid white;
+    padding: 4rem 5rem 4rem 5rem;
+    border: 2px solid white;
     border-radius: 10px;
     margin: 0.5rem;
   }
