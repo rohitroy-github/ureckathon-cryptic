@@ -9,6 +9,16 @@ const HeaderComp = (props) => {
     setopen((prevState) => !prevState);
     console.log(open);
   };
+
+  // gotoAboutUsSection;
+  function goToContactUsSection() {
+    props.scrollTo.current.scrollIntoView({behavior: "smooth"});
+  }
+
+  function goToAboutUsSection() {
+    props.scrollTo.current.scrollIntoView({behavior: "smooth"});
+  }
+
   return (
     <>
       <div className="header" ref={props.scrollTo}>
@@ -36,19 +46,23 @@ const HeaderComp = (props) => {
             </button>
           </div>
 
+          {/* <div>
+            {" "}
+            <a href="#">
+              <button className="navbarBtn" onClick={goToAboutUsSection}>
+                About
+              </button>
+            </a>
+          </div> */}
+          {/* 
           <div>
             {" "}
             <a href="#">
-              <button className="navbarBtn">About</button>
+              <button className="navbarBtn" onClick={goToContactUsSection}>
+                Contact
+              </button>
             </a>
-          </div>
-
-          <div>
-            {" "}
-            <a href="#">
-              <button className="navbarBtn">Contact</button>
-            </a>
-          </div>
+          </div> */}
         </div>
       </div>
       {/* mobile nav starts */}
@@ -77,19 +91,19 @@ const HeaderComp = (props) => {
             </button>
           </div>
 
-          <div>
+          {/* <div>
             {" "}
             <a href="#">
               <button className="mobNavbarBtn">About</button>
             </a>
-          </div>
+          </div> */}
 
-          <div>
+          {/* <div>
             {" "}
             <a href="#">
               <button className="mobNavbarBtn">Contact</button>
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

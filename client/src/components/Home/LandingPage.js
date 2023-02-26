@@ -5,6 +5,9 @@ import FaqComp from "./home-components/FaqComp";
 import FooterComp from "./home-components/FooterComp";
 import {Login} from "./home-components/LoginComp";
 import {Register} from "./home-components/RegisterComp";
+
+import AboutUsSection from "./home-components/AboutUsSection";
+
 import "./LandingPage.css";
 
 const LandingPage = () => {
@@ -25,6 +28,7 @@ const LandingPage = () => {
         )}
       </div>
       <CoverComp scrollTo={loginref} />
+      <AboutUsSection />
       <FaqComp scrollTo={loginref} />
       <FooterComp />
     </div>

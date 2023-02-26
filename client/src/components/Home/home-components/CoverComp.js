@@ -37,7 +37,7 @@ const CoverComp = (props) => {
       });
   }, []);
 
-  console.log(coins);
+  // console.log(coins);
 
   return (
     <div className="cover">

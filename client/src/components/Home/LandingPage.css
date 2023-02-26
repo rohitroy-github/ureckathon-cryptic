@@ -242,6 +242,7 @@ body {
   padding-top: 2rem;
   padding-left: 5rem;
   padding-right: 5rem;
+  padding-bottom: 2rem;
 }
 
 .grid_comp {
@@ -352,6 +353,30 @@ body {
   color: #666;
   cursor: pointer;
   margin-top: 10px;
+}
+
+.about_us {
+  padding: 4rem 5rem 4rem 5rem;
+  background-color: #e1e1e1;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.about_us h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #222;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.about_us p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #222;
+  cursor: pointer;
+  margin-bottom: 16px;
+  line-height: 35px;
 }
 
 .faq_comp {
@@ -806,5 +831,32 @@ button {
     text-align: center;
     align-items: center;
     justify-content: center;
+  }
+
+  .about_us {
+    margin: 0;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .about_us h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #222;
+    cursor: pointer;
+    margin-bottom: 16px;
+  }
+
+  .about_us p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #222;
+    cursor: pointer;
+    margin-bottom: 16px;
+    line-height: 20px;
   }
 }
